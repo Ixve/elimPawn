@@ -1,6 +1,9 @@
 @echo off
 cls
 :: Educational purposes only :^)
+:: Pre-obfuscated batch script, PowerShell commands encoded with base64
+:: To decode run the following in PowerShell:
+:: [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String('STRING TO DECODE'))
 
 
 echo [elimPawn] Stage 0 ; IP Check Via ASN
