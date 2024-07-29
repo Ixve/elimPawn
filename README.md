@@ -1,6 +1,10 @@
 # elimPawn
 elimPawn is a batch-based dropper for sneaky malware, which utilizes the Visual Studio "pre-build setup" in order to run malicious batch code.
 
+# File Structure
+* / - Contains all of the pyarmor'd files/EXEs, including the main stealer.
+* /DEV/ - Contains all of the files, pre-encoded/pre-obfuscated & encoded/obfuscated.
+
 # Stages
 * [Stage 0 - IP Check]<br>Checks the IP by comparing the IPs ASN to a list of known bad ASNs, this isn't the best check, but it works for the most part:tm: - if it gets a hit, exits all `conhost.exe`, `cmd.exe` and `powershell.exe` processes.<br><br>
 * [Stage 1 - Elevation]<br>Elevates the current shell by making and running a VBS script.<br><br>
