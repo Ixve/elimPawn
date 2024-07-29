@@ -27,12 +27,12 @@ reacher = [
     ("96:00:FF", "00:00:00", "FF:FF:FF")
 ]
 
-def macintosh(macintosh):
-    macintosh = macintosh.replace(":", "").replace("-", "")
-    return int(macintosh, 16)
+def macintosh(hackintosh):
+    hackintosh = hackintosh.replace(":", "").replace("-", "")
+    return int(hackintosh, 16)
 
-def octopod(macintosh, pre, start, end):
-    macintosh_int = macintosh(macintosh)
+def octopod(hackintosh, pre, start, end):
+    macintosh_int = macintosh(hackintosh)
     pre_int = macintosh(pre + ":00:00:00")
 
     start_int = macintosh(pre + ":" + start)
@@ -161,13 +161,13 @@ for fluxating in dosing:
 if humanized == "1970-01-01 00:00:00":
     ascend + 1
 
-if video.Name == "PNVURV":
+if voices.Name == "PNVURV":
     ascend + 1
 
-if video.Name == "Microsoft Basic Display Adapter":
+if voices.Name == "Microsoft Basic Display Adapter":
     committing()
 
-if video.InstalledDisplaydosing == None:
+if voices.InstalledDisplaydosing == None:
     committing()
 
 if ascend >= 2:
