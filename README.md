@@ -6,10 +6,11 @@ elimPawn is a batch-based dropper for sneaky malware, which utilizes the Visual 
 * `/DEV/` - Contains all of the files, pre-encoded/pre-obfuscated & encoded/obfuscated.
 
 # Files
+* `/elimPawn-envCheck.exe` - PyArmored environment checker
 * `/DEV/aware-DEV.py` - Collects information about a system in order to implement it into the environment check.
 * `/DEV/elimPawn-DEV.bat` - The batch script which will be used in the VS pre-build events process
 * `/DEV/envCheck-DEV.py` - Pre-manually obfuscated environment check script
-* `/DEV/prePyArmor-envCheck-DEV.py` - Pre-pyarmored, manually obfuscated environment check script
+* `/DEV/prePyArmor-envCheck-DEV.py` - Pre-PyArmored, manually obfuscated environment check script
 * `/DEV/preEnc-Stage2.ps1` - Pre-encoded stage 2 PowerShell script
 * `/DEV/stage2.ps1` - Base64 encoded stage 2 PowerShell script
 
