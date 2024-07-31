@@ -31,7 +31,7 @@ localad = os.getenv("LOCALAPPDATA")
 mainad = os.getenv("APPDATA")
 
 new_dir = rand_gen()
-main_path = 'C:\\Users\\Public'
+main_path = os.getenv('LOCALAPPDATA')
 
 try:
     rmtree(f'{main_path}\\sycillia')
