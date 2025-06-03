@@ -1,5 +1,7 @@
 # Dev Pause
-Development on a pause due to personal issues.
+This whole project needs to be re-thought and built from ground-up.<br>
+Will be done once I have free time and sit down to do it<br>
+Already updated envCheck with more techniques.
 
 # elimPawn
 elimPawn is a batch-based dropper for sneaky malware, which utilizes the Visual Studio "pre-build setup" in order to run malicious batch code.
